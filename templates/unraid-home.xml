@@ -6,7 +6,7 @@
 
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Icon>https://raw.githubusercontent.com/rcodehub/unraid-home/main/public/pwa/icon-192.png</Icon>
+  <Icon>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/master/templates/unraid-home.png</Icon>
  
   <!-- NOTE: The port in the entry ALWAYS refers to the container port, not the host port-->
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
@@ -22,10 +22,10 @@
   <Project>https://github.com/rcodehub/unraid-home</Project>
 
   <!-- Raw URL to this exact template file -->
-  <TemplateURL>https://raw.githubusercontent.com/rcodehub/unraid-home/main/templates/unraid-home.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/rcodehub/unraid-ca-apps/master/templates/unraid-home.xml</TemplateURL>
 
   <!-- Readme first file -->
-  <ReadMe>https://raw.githubusercontent.com/rcodehub/unraid-home/refs/heads/main/README.md</ReadMe>
+  <ReadMe>https://raw.githubusercontent.com/rcodehub/unraid-home/master/README.md</ReadMe>
  
   <!-- Valid category entries can be generated from the Application Categorizer plugin available in Apps -->
  <Category>Tools: Productivity:</Category>
