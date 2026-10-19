@@ -4,7 +4,7 @@
     My repo for Unraid dockers.  Nothing too fancy.
   </Profile>
   <!-- Optional icon -->
-  <Icon>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/main/icon.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/master/icon.svg</Icon>
   <!-- Optional web page -->
   <WebPage>https://github.com/rcodehub/Unraid-CA-Apps</WebPage>
 </CommunityApplications>
