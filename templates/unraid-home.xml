@@ -1,7 +1,8 @@
+<?xml version="1.0"?>
 <Container version="2">
   <Name>Unraid-Home</Name>
   <Repository>ghcr.io/rcodehub/unraid-home:latest</Repository>
-  <Registry>https://ghcr.io</Registry>
+  <Registry>https://ghcr.io/rcodehub/unraid-home</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -9,11 +10,10 @@
   <Support>https://github.com/rcodehub/unraid-home/issues</Support>
   <Project>https://github.com/rcodehub/unraid-home</Project>
   <ReadMe>https://github.com/rcodehub/unraid-home/blob/main/README.md</ReadMe>
-  <Overview>Another Unraid Homepage App</Overview>
-  <Description>Self-populating homepage for your Unraid server. Scans Docker for containers and shows each one as a tile with its WebUI link, icon and status. Edit mode (from your home network) lets you rename, regroup, pin and hide tiles, add links and pages, and pick themes. Optional: login with authenticator sign-in, alerts (ntfy, Gotify, Discord, webhook, email), uptime and update badges, server stats, and automation for Nginx Proxy Manager and Cloudflare Tunnel so your apps get internet addresses automatically. All settings are optional.&#xD;&#xA;&#xD;&#xA;Almost everything is set on the homepage itself: click Settings (home network only). What you set there is saved in /config/options.json. Only the few values on this template page that the container needs before it can start (the Docker address, proxy trust, the password and the mapped folders) stay here.&#xD;&#xA;&#xD;&#xA;Email alerts with Gmail need an app password (https://myaccount.google.com/apppasswords), not your normal Google password.&#xD;&#xA;&#xD;&#xA;Built entirely by AI (Claude, by Anthropic). Features are tested, but not every situation has been, so do your own due diligence before exposing it to the internet: keep the login on, use a strong password and 2FA, and review your Cloudflare, proxy and firewall settings. Use at your own risk.</Description>
+  <Overview>Self-populating homepage for your Unraid server. Scans Docker for containers and shows each one as a tile with its WebUI link, icon and status. Edit mode (from your home network) lets you rename, regroup, pin and hide tiles, add links and pages, and pick themes. Optional: login with authenticator sign-in, alerts (ntfy, Gotify, Discord, webhook, email), uptime and update badges, server stats, and automation for Nginx Proxy Manager and Cloudflare Tunnel so your apps get internet addresses automatically. All settings are optional.&#xD;&#xA;&#xD;&#xA;Almost everything is set on the homepage itself: click Settings (home network only). What you set there is saved in /config/options.json. Only the few values on this template page that the container needs before it can start (the Docker address, proxy trust, the password and the mapped folders) stay here.&#xD;&#xA;&#xD;&#xA;Email alerts with Gmail need an app password (https://myaccount.google.com/apppasswords), not your normal Google password.&#xD;&#xA;&#xD;&#xA;Built entirely by AI (Claude, by Anthropic). Features are tested, but not every situation has been, so do your own due diligence before exposing it to the internet: keep the login on, use a strong password and 2FA, and review your Cloudflare, proxy and firewall settings. Use at your own risk.</Overview>
   <Category>Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/rcodehub/unraid-home/main/unraid/unraid-home.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/refs/heads/main/templates/unraid-home.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/master/templates/unraid-home.png</Icon>
   <ExtraParams>--security-opt=no-new-privileges:true</ExtraParams>
   <PostArgs/>
@@ -22,6 +22,7 @@
   <Date>2026-10-19</Date>
   <Changes>
 ### 2026-10-19
+- 1.6.0: a small clock beside the page title: digital, analog or both, with face, 24-hour, seconds and date options on the Settings page.
 - 1.5.0: settings now live on the Settings page. The template keeps only what the container needs to start (Docker address, proxy trust, password, mapped folders). Anything you already set here is still used, and the page's own values win over it.
 - 1.4.0: a Settings page on the homepage can now change every option, grouped and explained. What you set there is saved in /config/options.json; the variables you set are copied there on first start.
 - 1.3.0: your home network no longer needs a login by default (REQUIRE_LOGIN_LAN=true restores it); separate sign-in timeouts for home and internet, also settable on the page.
