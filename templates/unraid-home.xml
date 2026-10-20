@@ -21,6 +21,12 @@
   <Requires/>
   <Date>2026-10-19</Date>
   <Changes>
+### 2026-10-20
+- 1.8.0: Add all missing and Remove all on the Proxies page, and a per-app Auto-create choice so automatic creation never makes hosts you do not want.
+- 1.7.2: a proxy host that points somewhere else can be removed from the Proxies page too, after a second confirmation.
+- 1.7.1: proxy hosts have their own Proxies page, opened from a button at the top, with filters and automatic-creation controls.
+- 1.7.0: full control of Nginx Proxy Manager proxy hosts from the dashboard: remove a host, mark an app "no proxy", see hidden apps that are still reachable, and choose whether automatic creation covers only new containers or every app.
+
 ### 2026-10-19
 - 1.6.0: a small clock beside the page title: digital, analog or both, with face, 24-hour, seconds and date options on the Settings page.
 - 1.5.0: settings now live on the Settings page. The template keeps only what the container needs to start (Docker address, proxy trust, password, mapped folders). Anything you already set here is still used, and the page's own values win over it.
