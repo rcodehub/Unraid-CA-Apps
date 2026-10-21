@@ -22,6 +22,7 @@
   <Date>2026-10-19</Date>
   <Changes>
 ### 2026-10-20
+- 1.9.2: tiles on the remote view show the address they open, so the Internet / Home network switch visibly changes them.
 - 1.9.1: the icon now loads from the main branch of Unraid-CA-Apps, like the template itself.
 - 1.9.0: the remote view only shows apps that really have a proxy host, and when signed in it can switch to your home-network links.
 - 1.8.0: Add all missing and Remove all on the Proxies page, and a per-app Auto-create choice so automatic creation never makes hosts you do not want.
