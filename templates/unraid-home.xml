@@ -14,7 +14,7 @@
   <Category>Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/refs/heads/main/templates/unraid-home.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/master/templates/unraid-home.png</Icon>
+  <Icon>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/refs/heads/main/templates/unraid-home.png</Icon>
   <ExtraParams>--security-opt=no-new-privileges:true</ExtraParams>
   <PostArgs/>
   <CPUset/>
@@ -22,6 +22,8 @@
   <Date>2026-10-19</Date>
   <Changes>
 ### 2026-10-20
+- 1.9.1: the icon now loads from the main branch of Unraid-CA-Apps, like the template itself.
+- 1.9.0: the remote view only shows apps that really have a proxy host, and when signed in it can switch to your home-network links.
 - 1.8.0: Add all missing and Remove all on the Proxies page, and a per-app Auto-create choice so automatic creation never makes hosts you do not want.
 - 1.7.2: a proxy host that points somewhere else can be removed from the Proxies page too, after a second confirmation.
 - 1.7.1: proxy hosts have their own Proxies page, opened from a button at the top, with filters and automatic-creation controls.
