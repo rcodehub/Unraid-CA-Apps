@@ -21,6 +21,9 @@
   <Requires/>
   <Date>2026-10-19</Date>
   <Changes>
+### 2026-10-23
+- 1.11.0: visitors on Tailscale or WireGuard are recognised: their tiles use the address they opened the page by, and apps with Tailscale turned on can open at their own Tailscale address (Links: Server / Tailscale).
+
 ### 2026-10-22
 - 1.10.2: proxy hosts that forward to the container name count as working, so their internet addresses appear in the bookmarks file and the remote view.
 - 1.10.1: the bookmarks file now comes from a Bookmarks link beside the clock, in a small window, instead of Edit mode.
@@ -49,7 +52,7 @@
   </Changes>
   <Config Name="WebUI Port" Target="8080" Default="8484" Mode="tcp" Description="Port the homepage is served on" Type="Port" Display="always" Required="true" Mask="false">8484</Config>
   <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Used to discover containers (and, only if you turn on Container controls, to start/stop/restart them). Note: the read-only flag does not limit what the Docker API allows." Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
-  <Config Name="Unraid templates" Target="/templates" Default="/boot/config/plugins/dockerMan/templates-user" Mode="ro" Description="Optional. Lets the hover summaries use each app's Overview text from its Unraid template. Read-only; only the name, repository, overview and category are read." Type="Path" Display="advanced" Required="false" Mask="false">/boot/config/plugins/dockerMan/templates-user</Config>
+  <Config Name="Unraid templates" Target="/templates" Default="/boot/config/plugins/dockerMan/templates-user" Mode="ro" Description="Optional. Lets the hover summaries use each app's Overview text from its Unraid template. Read-only; only the name, repository, overview, category and Tailscale settings are read. Also tells the page which apps have Tailscale turned on, so visitors on Tailscale can open them at their Tailscale address." Type="Path" Display="advanced" Required="false" Mask="false">/boot/config/plugins/dockerMan/templates-user</Config>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/unraid-home" Mode="rw" Description="Stores your settings, tile overrides, custom links and visitor history" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/unraid-home</Config>
   <Config Name="Update status file" Target="/unraid-update-status.json" Default="/var/lib/docker/unraid-update-status.json" Mode="ro" Description="Optional. Lets tiles show an Update badge for containers Unraid says are out of date. Read-only." Type="Path" Display="advanced" Required="false" Mask="false">/var/lib/docker/unraid-update-status.json</Config>
   <Config Name="Disk stats: array" Target="/mnt/user" Default="/mnt/user" Mode="ro" Description="Optional. Read-only. Lets the stats strip show array usage." Type="Path" Display="advanced" Required="false" Mask="false">/mnt/user</Config>
