@@ -21,6 +21,11 @@
   <Requires/>
   <Date>2026-10-19</Date>
   <Changes>
+### 2026-10-22
+- 1.10.2: proxy hosts that forward to the container name count as working, so their internet addresses appear in the bookmarks file and the remote view.
+- 1.10.1: the bookmarks file now comes from a Bookmarks link beside the clock, in a small window, instead of Edit mode.
+- 1.10.0: download every app as a browser bookmarks file, in one "Server" folder (Edit mode > Browser bookmarks).
+
 ### 2026-10-20
 - 1.9.2: tiles on the remote view show the address they open, so the Internet / Home network switch visibly changes them.
 - 1.9.1: the icon now loads from the main branch of Unraid-CA-Apps, like the template itself.
