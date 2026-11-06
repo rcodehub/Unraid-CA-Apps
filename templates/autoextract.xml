@@ -20,7 +20,10 @@
   <PostArgs/>
   <CPUset/>
   <Changes>
-Build 25, published 2026-11-04.
+Build 26, published 2026-11-06.
+
+### 2026-11-06
+- Folder pickers and **Extract folder…** only show folders mapped into the container (`/downloads`, `/trash`, `/mnt/user`, ...); container folders such as `/var` are hidden, and the app data folder too.
 
 ### 2026-11-04
 - The Status page lists the folders whose archives are waiting because they changed too recently (may still be downloading), with the archive names and when they will be old enough to extract.
@@ -45,7 +48,7 @@ Build 25, published 2026-11-04.
 - Archives found inside archives are no longer skipped as "too recent"; skipped files are listed in the log.
 - One invalid setting no longer resets all settings.
 </Changes>
-  <Date>2026-11-04</Date>
+  <Date>2026-11-06</Date>
   <DonateText/>
   <DonateLink/>
   <Requires/>
