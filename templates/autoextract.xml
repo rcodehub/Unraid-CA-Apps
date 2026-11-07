@@ -20,7 +20,7 @@
   <PostArgs/>
   <CPUset/>
   <Changes>
-Build 29, published 2026-11-07.
+Build 30, published 2026-11-07.
 
 ### 2026-11-07
 - New setting **Folder per archive** (default **Smart**). An archive whose contents have no single top folder is now extracted into a folder named after the archive, so ten archives of loose files in one folder no longer end up mixed together. An archive that already holds one folder, or sits alone in a folder named like it (a release folder), is extracted as before. Choose **Always** or **Never** to force either way. Existing installs get Smart; it also applies to nested archives and **Extract folder…**.
