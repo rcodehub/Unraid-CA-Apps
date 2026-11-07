@@ -20,7 +20,10 @@
   <PostArgs/>
   <CPUset/>
   <Changes>
-Build 28, published 2026-11-06.
+Build 29, published 2026-11-07.
+
+### 2026-11-07
+- New setting **Folder per archive** (default **Smart**). An archive whose contents have no single top folder is now extracted into a folder named after the archive, so ten archives of loose files in one folder no longer end up mixed together. An archive that already holds one folder, or sits alone in a folder named like it (a release folder), is extracted as before. Choose **Always** or **Never** to force either way. Existing installs get Smart; it also applies to nested archives and **Extract folder…**.
 
 ### 2026-11-06
 - **Cancel** button for each archive being extracted: stops that archive only, throws its partly extracted files away and leaves the archive as it was, while the others carry on. Scheduled scans skip a cancelled archive until it changes; Run now or Extract folder… tries it again.
@@ -51,16 +54,8 @@ Build 28, published 2026-11-06.
 - New Stats tab: data and files extracted, space freed, success rate, speed, 30-day chart, archive types and records.
 - Fixed: scans could repeat every few seconds when the folders were empty.
 - Clear-log button, log stays scrolled to the newest line; Settings shows the server path behind each folder; folder picker shows hidden folders.
-
-### 2026-11-02
-- First release: scheduled scans, nested extraction, junk cleanup (delete or move), permissions, live status page, settings page, history and login.
-- Container paths are now `/data` (app data), `/downloads` (folder to scan) and `/trash` (optional move folder); settings are created on first start.
-- RAR support fixed (official unrar on a Debian base image); split zips (`.z01`) and `.7z.001` volumes supported.
-- More reliable extraction: each archive extracts in its own work folder, 7-Zip is tried if the first extractor fails, failures are retried once, errors are explained.
-- Archives found inside archives are no longer skipped as "too recent"; skipped files are listed in the log.
-- One invalid setting no longer resets all settings.
 </Changes>
-  <Date>2026-11-06</Date>
+  <Date>2026-11-07</Date>
   <DonateText/>
   <DonateLink/>
   <Requires/>
