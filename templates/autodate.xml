@@ -20,9 +20,10 @@
   <PostArgs/>
   <CPUset/>
   <Changes>
-Build 2, published 2026-11-06.
+Build 3, published 2026-11-06.
 
 ### 2026-11-06
+- New AutoDate icon in Community Applications and the browser tab.
 - Opening an archive's file list no longer makes the page jump; it stays at the archive you opened.
 - First release of AutoDate.
 - Reads the original dates of the files inside zip, rar, 7z and tar archives (including multi-part sets) without extracting anything.
