@@ -21,6 +21,9 @@
   <Requires/>
   <Date>2026-10-19</Date>
   <Changes>
+### 2026-11-14
+- 1.11.0: rename an app's internet address on the Proxies page (npm.example.com instead of nginxproxymanager.example.com), with its Nginx Proxy Manager host renamed to match.
+
 ### 2026-10-22
 - 1.10.2: proxy hosts that forward to the container name count as working, so their internet addresses appear in the bookmarks file and the remote view.
 - 1.10.1: the bookmarks file now comes from a Bookmarks link beside the clock, in a small window, instead of Edit mode.
