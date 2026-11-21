@@ -20,7 +20,10 @@
   <PostArgs/>
   <CPUset/>
   <Changes>
-Build 4, published 2026-11-06.
+Build 5, published 2026-11-21.
+
+### 2026-11-21
+- Folders AutoDate creates in the move folder or the Recycle Bin now take the owner of the folder they are made in (on Unraid nobody:users, 99:100) instead of root, so apps running as 99:100 such as Syncthing don't report permission errors on them. Moved archives keep their own owner.
 
 ### 2026-11-06
 - **Clear results…** button in Archives empties the list (click twice to confirm). No archive is changed or deleted.
@@ -38,7 +41,7 @@ Build 4, published 2026-11-06.
 - An index remembers what was read, so unchanged archives are not read again.
 - Status page with live progress, per-archive Cancel, a log and a **Scan folder...** button for one-off scans. Settings, History, Stats, themes and a login page.
 </Changes>
-  <Date>2026-11-06</Date>
+  <Date>2026-11-21</Date>
   <DonateText/>
   <DonateLink/>
   <Requires/>
