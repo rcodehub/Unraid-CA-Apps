@@ -20,7 +20,11 @@
   <PostArgs/>
   <CPUset/>
   <Changes>
-Build 31, published 2026-11-08.
+Build 32, published 2026-11-21.
+
+### 2026-11-21
+- **Permissions:** extracted files and folders now get your permissions (and owner) before they appear in the folder. Before, they showed up with root's defaults (folders `drwxr-xr-x`, files `-rw-r--r--` or `-rw-------`) until the whole folder was finished, and the hidden work folder was root-only - Syncthing and other apps running as 99:100 reported permission errors on them.
+- **Also set the owner** (99:100, nobody:users) is now on for new installs. Existing installs keep their setting - turn it on in Settings if other apps (e.g. Syncthing) work on the extracted files.
 
 ### 2026-11-08
 - **Folder per archive:** an archive that only holds pieces of other archives (for example `release1.zip` ... `release20.zip`, each holding one `release.partNN.rar`) is now extracted in place, so the pieces stay together and the set can be extracted. If some archives in the folder are still too new, the set waits until they are ready.
@@ -42,12 +46,8 @@ Build 31, published 2026-11-08.
 - Settings: the "Where your folders are on the server" box updates as you type, including each source's Recycle Bin. Source and move folders must be inside a mapped folder and outside the app data folder, and invalid saved folders are reset when the settings load.
 - Folder picker fixes: a message when no folder is mapped, browsing from the top level works, and the move folder check refreshes after Browse.
 - Security: scripts using HTTP basic auth now count toward the failed-login lockout, malformed requests get a clear error instead of a server error, and statistics can no longer be corrupted when several saves happen at once.
-
-### 2026-11-04
-- The Status page lists the folders whose archives are waiting because they changed too recently (may still be downloading), with the archive names and when they will be old enough to extract.
-- Stats: one "Moved to Recycle Bin / trash" tile with the split underneath, instead of two separate tiles.
 </Changes>
-  <Date>2026-11-08</Date>
+  <Date>2026-11-21</Date>
   <DonateText/>
   <DonateLink/>
   <Requires/>
