@@ -22,6 +22,7 @@
   <Date>2026-10-19</Date>
   <Changes>
 ### 2026-11-26
+- 1.15.0: the bookmarks extension for Firefox (unsigned: Developer Edition, Nightly, ESR, LibreWolf, Waterfox), downloadable from the page next to the Chrome one.
 - 1.14.0: a Security overview on the Visitors page (checklist, current lockouts with Unlock, attackers and internet sign-ins), and the activity list shows allowed access too, with Load more.
 - 1.13.0: click an address on the Visitors or Activity panel to see who it belongs to and what it did; the version number at the bottom of the page; the bookmarks extension can be downloaded from the page.
 - 1.12.0: a browser extension (Chrome, Edge, Brave; in the repository's extension folder) keeps a bookmarks folder of your apps up to date by itself while you're on your home network.
