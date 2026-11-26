@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>credit-keepalive</Name>
+  <Repository>ghcr.io/rcodehub/credit-keepalive:latest</Repository>
+  <Registry>https://github.com/rcodehub/Credit-Keepalive/pkgs/container/credit-keepalive</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/rcodehub/Credit-Keepalive/issues</Support>
+  <Project>https://github.com/rcodehub/Credit-Keepalive</Project>
+  <Overview>Keeps a family's credit cards in use so banks don't close them for inactivity. Each card shows as a tile grouped by owner, and each owner gets reminders on their own phone or by email when a card is due.
+
+BETA: under active development and updated often.
+
+Includes a built-in ntfy server for phone notifications. Only the last 4 digits of each card are stored.
+
+Created entirely by AI (Claude). Tested, but not in every situation. Do your own due diligence before exposing it to the internet.</Overview>
+  <Date>2026-11-26</Date>
+  <Changes>Build 14, published 2026-11-26.
+### 2026-11-26
+
+- Test messages now check that the phone server stored the message, and say what to check on the phone if nothing arrives.
+- README: explains the test buttons and what a successful test does and doesn't prove.
+### 2026-10-29
+
+- Fixed first start: the ntfy server now starts, creates its auth file, then the logins are set up before it restarts. Earlier builds tried this too early and failed with "auth-file does not exist".
+- Version number shown in the footer of every page, set at build time (date, run number and commit).
+- deploy.bat now copies ntfy_accounts.py and fixes the template copy message.
+- Phone server logins: admin, phone and publisher accounts. Anonymous access is off. Settings shows the phone and admin passwords and can make new ones.
+- Unraid template: "Behind a reverse proxy" setting (TRUST_PROXY) added under advanced settings.
+- Security: CSRF tokens on every form, security headers, login lockout per address (5 failures in 5 minutes), Mark used rate limit (10 bad tokens in 10 minutes), Secure cookie over HTTPS.</Changes>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8686]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/rcodehub/Unraid-CA-Apps/main/templates/credit-keepalive.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/rcodehub/Credit-Keepalive/main/unraid/credit-keepalive.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI port" Target="8080" Default="8686" Mode="tcp" Description="Required. Port for the web interface. Keep the default unless it clashes with another app." Type="Port" Display="always" Required="true" Mask="false">8686</Config>
+  <Config Name="Phone notifications port" Target="2586" Default="2586" Mode="tcp" Description="Required for phone alerts. Port the ntfy phone app connects to. Keep the default unless it clashes with another app." Type="Port" Display="always" Required="true" Mask="false">2586</Config>
+  <Config Name="App data" Target="/data" Default="/mnt/user/appdata/credit-keepalive" Mode="rw" Description="Required. Database, settings and card pictures. Back up this folder." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/credit-keepalive</Config>
+  <Config Name="Phone server address" Target="NTFY_BASE_URL" Default="http://[IP]:2586" Mode="" Description="Required for phone alerts. The address the ntfy app on your phones connects to, such as http://192.168.1.50:2586. Behind a reverse proxy or Cloudflare Tunnel, use your hostname instead (for example https://ntfy.example.com) and point it at port 2586, with WebSocket support on." Type="Variable" Display="always" Required="true" Mask="false">http://[IP]:2586</Config>
+  <Config Name="App web address" Target="BASE_URL" Default="http://[IP]:8686" Mode="" Description="Required for the Mark used buttons in alerts. The address you open this app at, such as http://192.168.1.50:8686. Behind a reverse proxy, use your hostname instead." Type="Variable" Display="always" Required="true" Mask="false">http://[IP]:8686</Config>
+  <Config Name="Login password" Target="APP_PASSWORD" Default="" Mode="" Description="Optional. Sets the login password on first start. Leave blank to choose one on your first visit." Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Behind a reverse proxy (TRUST_PROXY)" Target="TRUST_PROXY" Default="" Mode="" Description="Optional, leave blank unless you use a reverse proxy. Set to 1 only if Nginx Proxy Manager, Traefik, Caddy or a Cloudflare Tunnel sits in front of this app. The app then counts failed logins by each visitor's real address, which the proxy passes along. Without this, everyone behind the proxy looks like one address, so one person's mistakes can lock everyone out for five minutes. Leave blank when you reach the app directly by IP address. Setting it to 1 without a proxy lets anyone fake an address and avoid the lockout." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="Time zone" Target="TZ" Default="America/New_York" Mode="" Description="Optional. Time zone for the daily reminder check. Defaults to New York." Type="Variable" Display="advanced" Required="false" Mask="false">America/New_York</Config>
+</Container>
