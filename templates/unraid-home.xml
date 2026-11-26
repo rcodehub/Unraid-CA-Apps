@@ -21,41 +21,32 @@
   <Requires/>
   <Date>2026-10-19</Date>
   <Changes>
-### 2026-11-26
-- 1.15.1: the Firefox bookmarks extension can reach a homepage on a plain http:// address (Firefox was switching it to https).
-- 1.15.0: the bookmarks extension for Firefox (unsigned: Developer Edition, Nightly, ESR, LibreWolf, Waterfox), downloadable from the page next to the Chrome one.
-- 1.14.0: a Security overview on the Visitors page (checklist, current lockouts with Unlock, attackers and internet sign-ins), and the activity list shows allowed access too, with Load more.
-- 1.13.0: click an address on the Visitors or Activity panel to see who it belongs to and what it did; the version number at the bottom of the page; the bookmarks extension can be downloaded from the page.
-- 1.12.0: a browser extension (Chrome, Edge, Brave; in the repository's extension folder) keeps a bookmarks folder of your apps up to date by itself while you're on your home network.
+### 2026-11-26 — 1.15.1 (1.12.0 to 1.15.1)
+- A browser extension for Chrome, Edge, Brave and Firefox keeps a bookmarks folder of your apps up to date by itself while you're on your home network; download it from the bottom of the page or the Bookmarks window.
+- A Security overview on the Visitors page: a checklist of how the page is protected, current lockouts with Unlock, attackers and sign-ins from the internet.
+- The activity list shows allowed access as well as blocked, with Load more; click any address to see who it belongs to and what it did.
+- The version number at the bottom of the page.
 
-### 2026-11-14
-- 1.11.0: rename an app's internet address on the Proxies page (npm.example.com instead of nginxproxymanager.example.com), with its Nginx Proxy Manager host renamed to match.
+### 2026-11-14 — 1.11.0
+- Rename an app's internet address on the Proxies page (npm.example.com instead of nginxproxymanager.example.com), with its Nginx Proxy Manager host renamed to match.
 
-### 2026-10-22
-- 1.10.2: proxy hosts that forward to the container name count as working, so their internet addresses appear in the bookmarks file and the remote view.
-- 1.10.1: the bookmarks file now comes from a Bookmarks link beside the clock, in a small window, instead of Edit mode.
-- 1.10.0: download every app as a browser bookmarks file, in one "Server" folder (Edit mode > Browser bookmarks).
+### 2026-10-22 — 1.10.2 (1.10.0 to 1.10.2)
+- Download every app as a browser bookmarks file, in one "Server" folder, from a Bookmarks link beside the clock.
+- Proxy hosts that forward to the container name count as working, so their internet addresses appear in the bookmarks file and the internet view.
 
-### 2026-10-20
-- 1.9.2: tiles on the remote view show the address they open, so the Internet / Home network switch visibly changes them.
-- 1.9.1: the icon now loads from the main branch of Unraid-CA-Apps, like the template itself.
-- 1.9.0: the remote view only shows apps that really have a proxy host, and when signed in it can switch to your home-network links.
-- 1.8.0: Add all missing and Remove all on the Proxies page, and a per-app Auto-create choice so automatic creation never makes hosts you do not want.
-- 1.7.2: a proxy host that points somewhere else can be removed from the Proxies page too, after a second confirmation.
-- 1.7.1: proxy hosts have their own Proxies page, opened from a button at the top, with filters and automatic-creation controls.
-- 1.7.0: full control of Nginx Proxy Manager proxy hosts from the dashboard: remove a host, mark an app "no proxy", see hidden apps that are still reachable, and choose whether automatic creation covers only new containers or every app.
+### 2026-10-20 — 1.9.2 (1.6.2 to 1.9.2)
+- Full control of Nginx Proxy Manager from a Proxies page: create, remove, Add all missing, Remove all, "no proxy" and a per-app Auto-create choice, with filters and automatic-creation controls.
+- The internet view only shows apps that really have a proxy host, and when signed in can switch to your home-network links; its tiles show the address they open.
+- Typing on the Settings page no longer loses focus; the icon loads from the main branch of Unraid-CA-Apps.
 
-### 2026-10-19
-- 1.6.0: a small clock beside the page title: digital, analog or both, with face, 24-hour, seconds and date options on the Settings page.
-- 1.5.0: settings now live on the Settings page. The template keeps only what the container needs to start (Docker address, proxy trust, password, mapped folders). Anything you already set here is still used, and the page's own values win over it.
-- 1.4.0: a Settings page on the homepage can now change every option, grouped and explained. What you set there is saved in /config/options.json; the variables you set are copied there on first start.
-- 1.3.0: your home network no longer needs a login by default (REQUIRE_LOGIN_LAN=true restores it); separate sign-in timeouts for home and internet, also settable on the page.
-- 1.2.0: history also records scans for non-existent paths, which apps get opened, the sign-in method used, and per-app availability.
-- 1.1.0: visitor history and dashboard (page loads, sign-ins, blocked requests) kept as plain files in /config/analytics, reachable from a Visitors button on the LAN. Connection status for Nginx Proxy Manager and Cloudflare.
+### 2026-10-19 — 1.6.1 (1.1.0 to 1.6.1)
+- Settings now live on a Settings page on the homepage, grouped and explained (saved in /config/options.json). The template keeps only what the container needs to start (Docker address, proxy trust, password, mapped folders); anything you already set is still used.
+- Your home network no longer needs a login by default (REQUIRE_LOGIN_LAN=true restores it); separate sign-in timeouts for home and internet.
+- Visitor history and a Visitors page (page loads, sign-ins, blocked requests, scans, apps opened, per-app availability) kept as plain files in /config/analytics; connection status for Nginx Proxy Manager and Cloudflare.
+- A clock beside the page title: digital, analog or both.
 
-### 2026-10-18
-- 1.0.1: security review fixes (proxy-header handling, lockout limits). Socket-proxy setup documented.
-- 1.0.0: first stable release.
+### 2026-10-18 — 1.0.1 (1.0.0 and 1.0.1)
+- First stable release, followed by security review fixes (proxy-header handling, lockout limits) and socket-proxy setup docs.
   </Changes>
   <Config Name="WebUI Port" Target="8080" Default="8484" Mode="tcp" Description="Port the homepage is served on" Type="Port" Display="always" Required="true" Mask="false">8484</Config>
   <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Used to discover containers (and, only if you turn on Container controls, to start/stop/restart them). Note: the read-only flag does not limit what the Docker API allows." Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
