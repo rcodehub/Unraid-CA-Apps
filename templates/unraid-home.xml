@@ -21,6 +21,9 @@
   <Requires/>
   <Date>2026-10-19</Date>
   <Changes>
+### 2026-11-26
+- 1.12.0: a browser extension (Chrome, Edge, Brave; in the repository's extension folder) keeps a bookmarks folder of your apps up to date by itself while you're on your home network.
+
 ### 2026-11-14
 - 1.11.0: rename an app's internet address on the Proxies page (npm.example.com instead of nginxproxymanager.example.com), with its Nginx Proxy Manager host renamed to match.
 
