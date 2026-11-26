@@ -17,7 +17,7 @@ Includes a built-in ntfy server for phone notifications. Only the last 4 digits 
 
 Created entirely by AI (Claude). Tested, but not in every situation. Do your own due diligence before exposing it to the internet.</Overview>
   <Date>2026-11-26</Date>
-  <Changes>Build 14, published 2026-11-26.
+  <Changes>Build 2, published 2026-11-26.
 ### 2026-11-26
 
 - Test messages now check that the phone server stored the message, and say what to check on the phone if nothing arrives.
