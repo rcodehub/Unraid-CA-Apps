@@ -21,11 +21,12 @@
   <Requires/>
   <Date>2026-10-19</Date>
   <Changes>
-### 2026-11-26 — 1.15.1 (1.12.0 to 1.15.1)
+### 2026-11-26 — 1.15.2 (1.12.0 to 1.15.2)
 - A browser extension for Chrome, Edge, Brave and Firefox keeps a bookmarks folder of your apps up to date by itself while you're on your home network; download it from the bottom of the page or the Bookmarks window.
 - A Security overview on the Visitors page: a checklist of how the page is protected, current lockouts with Unlock, attackers and sign-ins from the internet.
 - The activity list shows allowed access as well as blocked, with Load more; click any address to see who it belongs to and what it did.
 - The version number at the bottom of the page.
+- Clearer about which settings you need when your Cloudflare tunnel already works: just the main domain (and Nginx Proxy Manager's login for the Proxies page).
 
 ### 2026-11-14 — 1.11.0
 - Rename an app's internet address on the Proxies page (npm.example.com instead of nginxproxymanager.example.com), with its Nginx Proxy Manager host renamed to match.
