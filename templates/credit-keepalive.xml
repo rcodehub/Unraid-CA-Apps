@@ -17,9 +17,10 @@ Includes a built-in ntfy server for phone notifications. Only the last 4 digits 
 
 Created entirely by AI (Claude). Tested, but not in every situation. Do your own due diligence before exposing it to the internet.</Overview>
   <Date>2026-11-26</Date>
-  <Changes>Build 18, published 2026-11-26.
+  <Changes>Build 19, published 2026-11-26.
 ### 2026-11-26
 
+- Find pictures reads pages up to 12 MB. Larger pages are searched from the top, and you are told when only part was searched (it used to refuse pages over 3 MB).
 - Find pictures shows a progress bar and elapsed time while it works.
 - If the search finds no matching pictures, every picture on the page is listed so you can tick the ones you want and choose the card for each.
 - Pictures from a page are refused if their address points to a private network.
