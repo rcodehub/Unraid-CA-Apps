@@ -17,10 +17,9 @@ Includes a built-in ntfy server for phone notifications. Only the last 4 digits 
 
 Created entirely by AI (Claude). Tested, but not in every situation. Do your own due diligence before exposing it to the internet.</Overview>
   <Date>2026-11-26</Date>
-  <Changes>Build 24, published 2026-11-26.
+  <Changes>Build 25, published 2026-11-26.
 ### 2026-11-26
 
-- Nginx Proxy Manager (Settings): list, create and remove proxy hosts from the Settings page. 'Create Phone and Web Proxies' makes one host for the phone address (port 2586) and one for the web address (port 8686), forwarding to this server. Your NPM login is used for each action and is not saved; only the NPM address is kept. Certificates stay in Nginx Proxy Manager.
 - Settings → Address: the phone address and the web address are labelled separately, with examples for a home-network address and for a separate proxy hostname each. Settings warns when both use the same host, or when the web address uses the phone port 2586. Check Web Address asks the server to reach the web address and confirms it is Credit-KeepAlive.
 - Send Test Due Card (Settings → Tests): sends a fake due-card reminder with the same Mark used button, to the phone and email alerts. Check Test Result shows whether the button reached the app. The test changes no card, and its link expires after 30 minutes. Older test messages keep working until they expire, and the status page shows the button address to check from a phone's browser.
 - Backup and restore (Settings): download one zip with every card, setting, card picture and the phone server's logins. Restore it on the same or a new server after confirming. The zip contains logins and secrets, so keep it private.
