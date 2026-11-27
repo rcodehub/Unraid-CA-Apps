@@ -24,7 +24,8 @@
 ### 2026-11-27 — 1.16.0
 - Bookmarks (the file and the extension) now start with a bookmark to the homepage itself.
 - The bookmarks extension says when a newer version is waiting (and the bottom of the page does too); in Firefox it updates itself.
-- The homepage's own proxy host is recognised on the Proxies page, whatever it's called, and Add all / Remove all leave it alone.
+- The Proxies page works out which container each Nginx Proxy Manager host forwards to, so hosts you made yourself under your own names are matched to their app (and used as its address) instead of being listed as having no container.
+- The homepage's own proxy host is recognised too, and Add all / Remove all leave it alone.
 
 ### 2026-11-26 — 1.15.2 (1.12.0 to 1.15.2)
 - A browser extension for Chrome, Edge, Brave and Firefox keeps a bookmarks folder of your apps up to date by itself while you're on your home network; download it from the bottom of the page or the Bookmarks window.
