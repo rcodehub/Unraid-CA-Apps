@@ -23,6 +23,7 @@
   <Changes>
 ### 2026-11-27 — 1.16.0
 - Bookmarks (the file and the extension) now start with a bookmark to the homepage itself.
+- The bookmarks extension says when a newer version is waiting (and the bottom of the page does too); in Firefox it updates itself.
 - The homepage's own proxy host is recognised on the Proxies page, whatever it's called, and Add all / Remove all leave it alone.
 
 ### 2026-11-26 — 1.15.2 (1.12.0 to 1.15.2)
