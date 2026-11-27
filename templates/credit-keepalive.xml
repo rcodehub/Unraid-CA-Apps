@@ -17,9 +17,14 @@ Includes a built-in ntfy server for phone notifications. Only the last 4 digits 
 
 Created entirely by AI (Claude). Tested, but not in every situation. Do your own due diligence before exposing it to the internet.</Overview>
   <Date>2026-11-26</Date>
-  <Changes>Build 25, published 2026-11-26.
+  <Changes>Build 26, published 2026-11-26.
 ### 2026-11-26
 
+- Card Settings: the spread percentage now has a note that explains what it does, with the number of days early for the default cycle. Saving it re-plans every active card.
+- Fixed due date (per card, Edit Card): tick it to keep the card on its cycle end, never on a random day. Spread Due Dates Now and saving settings leave these cards alone.
+- Overview page (new, in the top menu): a read-only page of every card grouped by owner, with its last use, next due date, the days it can come up, and how it is spread.
+- Send Test Due Card: Settings → Tests now shows whether the last test button press reached the app, so the result appears where the test was sent.
+- Card Settings: saving the default days between uses now applies it. Cards still on the old default move to the new one, and cards with their own number keep it. Saving either setting plans every active card's due date again, so custom planned dates are reset. Changing the spread percentage on its own also takes effect now.
 - Settings → Address: the phone address and the web address are labelled separately, with examples for a home-network address and for a separate proxy hostname each. Settings warns when both use the same host, or when the web address uses the phone port 2586. Check Web Address asks the server to reach the web address and confirms it is Credit-KeepAlive.
 - Send Test Due Card (Settings → Tests): sends a fake due-card reminder with the same Mark used button, to the phone and email alerts. Check Test Result shows whether the button reached the app. The test changes no card, and its link expires after 30 minutes. Older test messages keep working until they expire, and the status page shows the button address to check from a phone's browser.
 - Backup and restore (Settings): download one zip with every card, setting, card picture and the phone server's logins. Restore it on the same or a new server after confirming. The zip contains logins and secrets, so keep it private.
