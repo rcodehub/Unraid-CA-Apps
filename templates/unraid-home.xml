@@ -21,6 +21,10 @@
   <Requires/>
   <Date>2026-10-19</Date>
   <Changes>
+### 2026-11-27 — 1.16.0
+- Bookmarks (the file and the extension) now start with a bookmark to the homepage itself.
+- The homepage's own proxy host is recognised on the Proxies page, whatever it's called, and Add all / Remove all leave it alone.
+
 ### 2026-11-26 — 1.15.2 (1.12.0 to 1.15.2)
 - A browser extension for Chrome, Edge, Brave and Firefox keeps a bookmarks folder of your apps up to date by itself while you're on your home network; download it from the bottom of the page or the Bookmarks window.
 - A Security overview on the Visitors page: a checklist of how the page is protected, current lockouts with Unlock, attackers and sign-ins from the internet.
