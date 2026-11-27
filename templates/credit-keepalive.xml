@@ -17,9 +17,16 @@ Includes a built-in ntfy server for phone notifications. Only the last 4 digits 
 
 Created entirely by AI (Claude). Tested, but not in every situation. Do your own due diligence before exposing it to the internet.</Overview>
   <Date>2026-11-26</Date>
-  <Changes>Build 20, published 2026-11-26.
+  <Changes>Build 21, published 2026-11-26.
 ### 2026-11-26
 
+- Backup and restore (Settings): download one zip with every card, setting, card picture and the phone server's logins. Restore it on the same or a new server after confirming. The zip contains logins and secrets, so keep it private.
+- Restore checks the zip first: only the expected files are accepted, paths that try to leave the data folder are refused, and the database must pass an integrity check. Nothing is changed if a check fails. Restart the phone server after a restore.
+- Forms other than a backup restore are still capped at 6 MB.
+- Theme preview: choosing a colour, font, shadow, width, corner rounding or light/dark in the Theme menu shows the change at once. Closing the menu without saving puts the saved look back.
+- Find Card Names (Card Settings): reads an issuer's card list page and up to 12 card pages on the same site, then lists the card names for you to tick. Names already in the list are skipped.
+- Picker thumbnails now load through this server. The page's image rules only allow this server, so the remote pictures were blocked before.
+- Headings, navigation, buttons, table headers, menu options and page titles use Proper Case. Field labels, help text and messages stay in sentence case.
 - Import: download an Excel template with dropdowns for the issuer, the card (listed for the chosen issuer) and the owner. Excel (.xlsx) and CSV files both import.
 - Find pictures reads pages up to 12 MB. Larger pages are searched from the top, and you are told when only part was searched (it used to refuse pages over 3 MB).
 - Find pictures shows a progress bar and elapsed time while it works.
