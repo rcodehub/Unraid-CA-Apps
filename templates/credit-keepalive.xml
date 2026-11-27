@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>credit-keepalive</Name>
+  <Name>Credit-KeepAlive</Name>
   <Repository>ghcr.io/rcodehub/credit-keepalive:latest</Repository>
   <Registry>https://github.com/rcodehub/Credit-Keepalive/pkgs/container/credit-keepalive</Registry>
   <Network>bridge</Network>
